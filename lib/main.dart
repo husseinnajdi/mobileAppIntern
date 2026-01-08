@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mobileappintern/provider/productprovider.dart';
+import 'package:provider/provider.dart';
+import 'package:mobileappintern/root_screen.dart';
 import 'package:mobileappintern/screen/auth/loginpage.dart';
 import 'package:mobileappintern/screen/auth/signuppage.dart';
 import 'package:mobileappintern/screen/homepage.dart';
@@ -22,19 +25,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ProductProvider()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        ),
+        home: Onboardingscreen(),
+        routes: {
+          RootScreen.routName: (context) => const RootScreen(),
+          Onboardingscreen.routeName: (context) => const Onboardingscreen(),
+          Homepage.routeName: (context) => const Homepage(),
+          Loginpage.routeName: (context) => const Loginpage(),
+          Signuppage.routeName: (context) => const Signuppage(),
+        },
       ),
-      home: Onboardingscreen(),
-      routes: {
-        Onboardingscreen.routeName: (context) => const Onboardingscreen(),
-        Homepage.routeName: (context) => const Homepage(),
-        Loginpage.routeName: (context) => const Loginpage(),
-        Signuppage.routeName: (context) => const Signuppage(),
-      },
     );
   }
 }

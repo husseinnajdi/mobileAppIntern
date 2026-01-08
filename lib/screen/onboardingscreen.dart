@@ -21,7 +21,7 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
         curve: Curves.easeIn,
       );
     } else {
-      Navigator.pushNamed(context, '/signuppage');
+      Navigator.pushReplacementNamed(context, '/signuppage');
     }
   }
 
@@ -40,7 +40,7 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
   }
 
   void finishonboarding() {
-    Navigator.pushNamed(context, '/homepage');
+    Navigator.pushReplacementNamed(context, '/Rootpage');
   }
 
   @override
@@ -55,8 +55,9 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
         },
         children: [
           OnboardingPage(
-            title: "Welcome to Our App",
-            description: "Discover new features and functionalities.",
+            title: "Welcome to Our Store",
+            description:
+                "Shop your favorite products easily and securely in one place.",
             image: "assets/onboarding/onboarding1.png",
             onNext: () {
               nextpage();
@@ -66,9 +67,11 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
             },
             isLast: false,
           ),
+
           OnboardingPage(
-            title: "Stay Connected",
-            description: "Connect with people around the world.",
+            title: "Best Deals & Offers",
+            description:
+                "Discover exclusive discounts and special offers every day.",
             image: "assets/onboarding/onboarding2.png",
             onNext: () {
               nextpage();
@@ -78,9 +81,11 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
             },
             isLast: false,
           ),
+
           OnboardingPage(
-            title: "Get Started",
-            description: "Let's get you set up and ready to go!",
+            title: "Fast & Easy Shopping",
+            description:
+                "Add to cart, checkout quickly, and enjoy fast delivery.",
             image: "assets/onboarding/onboarding3.png",
             onNext: () {
               nextpage();

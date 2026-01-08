@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "category": "Fruits",
+        "title": "Red Apples",
+        "image": "assets/images/apples.png",
+        "description": "Fresh and crispy red apples",
+        "price": 5,
+        "dealprice": 4,
+        "hasdeal": true
+    },
+    {
+        "id": 2,
+        "category": "Fruits",
+        "title": "Bananas",
+        "image": "assets/images/bananas.png",
+        "description": "Sweet organic bananas",
+        "price": 3,
+        "dealprice": 0,
+        "hasdeal": false
+    },
+    {
+        "id": 3,
+        "category": "Fruits",
+        "title": "Oranges",
+        "image": "assets/images/oranges.png",
+        "description": "Juicy vitamin C rich oranges",
+        "price": 4,
+        "dealprice": 3,
+        "hasdeal": true
+    },
+    {
+        "id": 4,
+        "category": "Fruits",
+        "title": "Strawberries",
+        "image": "assets/images/strawberries.png",
+        "description": "Fresh strawberries box",
+        "price": 6,
+        "dealprice": 0,
+        "hasdeal": false
+    },
+    {
+        "id": 5,
+        "category": "Vegetables",
+        "title": "Tomatoes",
+        "image": "assets/images/tomatoes.png",
+        "description": "Fresh red tomatoes",
+        "price": 4,
+        "dealprice": 3,
+        "hasdeal": true
+    },
+    {
+        "id": 6,
+        "category": "Vegetables",
+        "title": "Potatoes",
+        "image": "assets/images/potatoes.png",
+        "description": "1kg golden potatoes",
+        "price": 3,
+        "dealprice": 0,
+        "hasdeal": false
+    },
+    {
+        "id": 7,
+        "category": "Vegetables",
+        "title": "Onions",
+        "image": "assets/images/onions.png",
+        "description": "Fresh white onions",
+        "price": 2,
+        "dealprice": 1,
+        "hasdeal": true
+    },
+    {
+        "id": 8,
+        "category": "Milk & Dairy",
+        "title": "Whole Milk",
+        "image": "assets/images/milk.png",
+        "description": "1 liter fresh whole milk",
+        "price": 2,
+        "dealprice": 1,
+        "hasdeal": true
+    },
+    {
+        "id": 9,
+        "category": "Milk & Dairy",
+        "title": "Yogurt",
+        "image": "assets/images/yogurt.png",
+        "description": "Natural creamy yogurt",
+        "price": 3,
+        "dealprice": 0,
+        "hasdeal": false
+    },
+    {
+        "id": 10,
+        "category": "Milk & Dairy",
+        "title": "Butter",
+        "image": "assets/images/butter.png",
+        "description": "Salted butter block",
+        "price": 4,
+        "dealprice": 3,
+        "hasdeal": true
+    },
+    {
+        "id": 11,
+        "category": "Bakery",
+        "title": "White Bread",
+        "image": "assets/images/bread.png",
+        "description": "Fresh bakery white bread",
+        "price": 2,
+        "dealprice": 0,
+        "hasdeal": false
+    },
+    {
+        "id": 12,
+        "category": "Bakery",
+        "title": "Croissant",
+        "image": "assets/images/croissant.png",
+        "description": "Buttery French croissant",
+        "price": 2,
+        "dealprice": 1,
+        "hasdeal": true
+    },
+    {
+        "id": 13,
+        "category": "Bakery",
+        "title": "Chocolate Cake",
+        "image": "assets/images/cake.png",
+        "description": "Rich chocolate cake slice",
+        "price": 5,
+        "dealprice": 4,
+        "hasdeal": true
+    },
+    {
+        "id": 14,
+        "category": "Meat",
+        "title": "Chicken Breast",
+        "image": "assets/images/chicken.png",
+        "description": "Fresh chicken breast 1kg",
+        "price": 8,
+        "dealprice": 7,
+        "hasdeal": true
+    },
+    {
+        "id": 15,
+        "category": "Meat",
+        "title": "Beef Steak",
+        "image": "assets/images/beef.png",
+        "description": "Premium beef steak",
+        "price": 15,
+        "dealprice": 0,
+        "hasdeal": false
+    },
+    {
+        "id": 16,
+        "category": "Snacks",
+        "title": "Potato Chips",
+        "image": "assets/images/chips.png",
+        "description": "Crunchy salted chips",
+        "price": 3,
+        "dealprice": 2,
+        "hasdeal": true
+    },
+    {
+        "id": 17,
+        "category": "Snacks",
+        "title": "Chocolate Bar",
+        "image": "assets/images/chocolate.png",
+        "description": "Milk chocolate bar",
+        "price": 2,
+        "dealprice": 0,
+        "hasdeal": false
+    },
+    {
+        "id": 18,
+        "category": "Snacks",
+        "title": "Cookies",
+        "image": "assets/images/cookies.png",
+        "description": "Chocolate chip cookies",
+        "price": 4,
+        "dealprice": 3,
+        "hasdeal": true
+    },
+    {
+        "id": 19,
+        "category": "Drinks",
+        "title": "Orange Juice",
+        "image": "assets/images/juice.png",
+        "description": "100% natural orange juice",
+        "price": 4,
+        "dealprice": 3,
+        "hasdeal": true
+    },
+    {
+        "id": 20,
+        "category": "Drinks",
+        "title": "Mineral Water",
+        "image": "assets/images/water.png",
+        "description": "1.5L mineral water",
+        "price": 1,
+        "dealprice": 0,
+        "hasdeal": false
+    }
+]
