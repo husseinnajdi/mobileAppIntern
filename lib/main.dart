@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mobileappintern/provider/categoriesprovider.dart';
 import 'package:mobileappintern/provider/productprovider.dart';
+import 'package:mobileappintern/provider/swipperprovider.dart';
 import 'package:mobileappintern/services/prefesHelper.dart';
 import 'package:provider/provider.dart';
 import 'package:mobileappintern/root_screen.dart';
@@ -34,6 +36,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => ProductProvider()),
+        ChangeNotifierProvider(create: (_) => Categoriesprovider()),
+        ChangeNotifierProvider(create: (_) => Swipperprovider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

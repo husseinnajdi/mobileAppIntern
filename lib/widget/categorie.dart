@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Categorie extends StatefulWidget {
+class CategorieCard extends StatefulWidget {
   final String? title;
   final String? image;
-  const Categorie({super.key, this.title, this.image});
+  const CategorieCard({super.key, this.title, this.image});
 
   @override
-  State<Categorie> createState() => _CategorieState();
+  State<CategorieCard> createState() => _CategorieState();
 }
 
-class _CategorieState extends State<Categorie> {
+class _CategorieState extends State<CategorieCard> {
   @override
   Widget build(BuildContext context) {
     return Column(

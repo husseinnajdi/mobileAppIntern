@@ -33,8 +33,8 @@ class _ProductState extends State<Product> {
         border: Border.all(color: Colors.grey.shade300),
         borderRadius: BorderRadius.circular(16.0),
       ),
-      height: 185,
-      width: 120,
+      height: height>560 && height< 1080 ? height*0.25: height*0.2,
+      width: width>320 && width< 540 ? width* 0.3: width* 0.25,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

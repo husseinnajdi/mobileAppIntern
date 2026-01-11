@@ -76,6 +76,8 @@ flutter:
     - assets/onboarding/onboarding2.png
     - assets/onboarding/onboarding3.png
     - assets/products.json
+    - assets/categories.json
+    - assets/swiperimage.json
     - assets/images/
     - assets/categories/
   #   - images/a_dot_ham.jpeg
