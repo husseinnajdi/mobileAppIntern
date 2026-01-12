@@ -30,16 +30,17 @@ class _ProductState extends State<Product> {
     double width = MediaQuery.of(context).size.width;
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey.shade300),
+        border: Border.all(color: const Color.fromARGB(255, 114, 178, 230)),
         borderRadius: BorderRadius.circular(16.0),
       ),
-      height: height>560 && height< 1080 ? height*0.25: height*0.2,
-      width: width>320 && width< 540 ? width* 0.3: width* 0.25,
+      height: height > 560 && height < 1080 ? height * 0.25 : height * 0.2,
+      width: width > 320 && width < 540 ? width * 0.4 : width * 0.25,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Stack(
+            clipBehavior: Clip.none,
             children: [
               Center(
                 child: Container(
@@ -53,6 +54,11 @@ class _ProductState extends State<Product> {
                     ),
                   ),
                 ),
+              ),
+              Positioned(
+                top: 6,
+                right: 6,
+                child: Icon(Icons.favorite_border, color: Colors.red, size: 20),
               ),
             ],
           ),

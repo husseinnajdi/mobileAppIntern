@@ -35,4 +35,8 @@ static Future<void> login(String email, String password) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isLoggedIn', value);
   }
+  static Future<void> logout() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('isLoggedIn', false);
+  }
 }

@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:mobileappintern/provider/categoriesprovider.dart';
 import 'package:mobileappintern/provider/swipperprovider.dart';
 import 'package:provider/provider.dart';
-import '../provider/productprovider.dart';
-import '../widget/categorie.dart';
-import '../widget/product.dart';
+import '../../provider/productprovider.dart';
+import '../../widget/categorie.dart';
+import '../../widget/product.dart';
 
 class Homepage extends StatefulWidget {
   static const String routeName = '/homepage';
@@ -76,6 +76,13 @@ class _HomepageState extends State<Homepage> {
                   itemCount: swiper.length,
                   itemBuilder: (context, index) =>
                       Image.asset(swiper[index].image, fit: BoxFit.fill),
+                  pagination: const SwiperPagination(
+                    alignment: Alignment.bottomCenter,
+                    builder: DotSwiperPaginationBuilder(
+                      color: Colors.grey,
+                      activeColor: Color.fromARGB(255, 255, 4, 4),
+                    ),
+                  ),
                 ),
               ),
             ),

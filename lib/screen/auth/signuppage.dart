@@ -59,8 +59,10 @@ void signupfct()async{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 114, 178, 230),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
+      body: GestureDetector(
+        onTap: () {
+          FocusScope.of(context).unfocus();
+        },
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -72,7 +74,7 @@ void signupfct()async{
                       key: formkey,
                       child: Column(
                         children: [
-                          Text(
+                          const Text(
                             'Sign Up ',
                             style: TextStyle(
                               fontSize: 24,
@@ -81,7 +83,7 @@ void signupfct()async{
                             ),
                           ),
                           SizedBox(height: 10),
-                          Text("Create You Account Now!"),
+                          const Text("Create You Account Now!"),
                           SizedBox(height: 12),
                           TextFormField(
                             controller: phonenumbertextcontroller,
@@ -220,7 +222,7 @@ void signupfct()async{
                               ),
                               backgroundColor: Colors.red,
                             ),
-                            child: Text(
+                            child:const Text(
                               "Sign Up",
                               style: TextStyle(
                                 color: Colors.white,
@@ -232,12 +234,12 @@ void signupfct()async{
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("Already have an account?"),
+                              const Text("Already have an account?"),
                               TextButton(
                                 onPressed: () {
                                   Navigator.pushReplacementNamed(context, "/loginpage");
                                 },
-                                child: Text(
+                                child:const Text(
                                   "Login",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
@@ -249,7 +251,8 @@ void signupfct()async{
                             ],
                           ),
                           SizedBox(height: 12),
-                          Row(
+                          
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Expanded(
@@ -279,7 +282,7 @@ void signupfct()async{
                           SizedBox(height: 12),
                           ElevatedButton.icon(
                             onPressed: () {},
-                            label: Text(
+                            label:const Text(
                               "Sign Up with Google",
                               style: TextStyle(
                                 color: Colors.black,
@@ -308,7 +311,7 @@ void signupfct()async{
                               ),
                               backgroundColor: Colors.white,
                             ),
-                            child: Text(
+                            child:const Text(
                               "Enter As Guest",
                               style: TextStyle(
                                 color: Colors.black,

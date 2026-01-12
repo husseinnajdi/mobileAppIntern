@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobileappintern/screen/onboardingcontent.dart';
+import 'package:mobileappintern/screen/splashonboarding/onboardingcontent.dart';
 
 class Onboardingscreen extends StatefulWidget {
   static const String routeName = '/onboardingscreen';

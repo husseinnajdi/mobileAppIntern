@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
-import 'package:mobileappintern/screen/cart.dart';
-import 'package:mobileappintern/screen/favorite.dart';
-import 'package:mobileappintern/screen/homepage.dart';
-import 'package:mobileappintern/screen/settings.dart';
+import 'package:mobileappintern/screen/rootscreens/cart.dart';
+import 'package:mobileappintern/screen/rootscreens/favorite.dart';
+import 'package:mobileappintern/screen/rootscreens/homepage.dart';
+import 'package:mobileappintern/screen/rootscreens/settings.dart';
 
 class RootScreen extends StatefulWidget {
   static const routName = "/Rootpage";

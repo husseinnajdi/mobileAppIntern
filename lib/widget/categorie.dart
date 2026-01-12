@@ -15,11 +15,23 @@ class _CategorieState extends State<CategorieCard> {
     return Column(
       children: [
         Container(
-          height: 60,
-          width: 60,
+          height: 70,
+          width: 70,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
-            color: Colors.grey.shade200,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 2,
+                blurRadius: 5,
+                offset: const Offset(0, 3),
+              ),
+            ],
+            border: Border.all(
+              color: const Color.fromARGB(255, 114, 178, 230),
+              width: 1,
+            ),
+            borderRadius: BorderRadius.circular(60),
+            color: const Color.fromARGB(255, 255, 255, 255),
             image: DecorationImage(
               image: AssetImage(widget.image!),
               fit: BoxFit.cover,
