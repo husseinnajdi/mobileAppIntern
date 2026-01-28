@@ -1,8 +1,12 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Prefeshelper {
-
-static Future<void> signup(String email, String password,int phonenumber,String name,) async {
+  static Future<void> signup(
+    String email,
+    String password,
+    int phonenumber,
+    String name,
+  ) async {
     final prefs = await SharedPreferences.getInstance();
     if (email.isNotEmpty) {
       await prefs.setString('email', email);
@@ -15,7 +19,8 @@ static Future<void> signup(String email, String password,int phonenumber,String 
     }
     await setlogin(true);
   }
-static Future<void> login(String email, String password) async {
+
+  static Future<void> login(String email, String password) async {
     final prefs = await SharedPreferences.getInstance();
     final storedEmail = prefs.getString('email');
     final storedPassword = prefs.getString('password');
@@ -26,15 +31,32 @@ static Future<void> login(String email, String password) async {
       throw Exception('Invalid email or password');
     }
   }
+
   static Future<bool> getlogin() async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getBool('isLoggedIn') ?? false;
   }
 
+static Future<Map<String, String?>> getUserData() async {
+  final prefs = await SharedPreferences.getInstance();
+  final isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+
+  if (!isLoggedIn) {
+    return {'email': null, 'name': null};
+  }
+
+  return {
+    'email': prefs.getString('email'),
+    'name': prefs.getString('name'),
+  };
+}
+
+
   static Future<void> setlogin(bool value) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isLoggedIn', value);
   }
+
   static Future<void> logout() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isLoggedIn', false);

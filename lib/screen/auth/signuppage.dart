@@ -205,9 +205,7 @@ void signupfct()async{
                             ),
           
                             onFieldSubmitted: (value) {
-                              FocusScope.of(
-                                context,
-                              ).requestFocus(passwordfocusnode);
+                              FocusScope.of(context).unfocus();
                             },
                           ),
                           SizedBox(height: 20),

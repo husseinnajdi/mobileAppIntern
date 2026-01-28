@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobileappintern/screen/view_all.dart';
 
 class CategorieCard extends StatefulWidget {
   final String? title;
@@ -14,27 +15,32 @@ class _CategorieState extends State<CategorieCard> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: 70,
-          width: 70,
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 2,
-                blurRadius: 5,
-                offset: const Offset(0, 3),
+        GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, ViewAll.routeName, arguments: {'categorie': widget.title, 'hasdeals': false});
+          },
+          child: Container(
+            height: 70,
+            width: 70,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 2,
+                  blurRadius: 5,
+                  offset: const Offset(0, 3),
+                ),
+              ],
+              border: Border.all(
+                color: const Color.fromARGB(255, 114, 178, 230),
+                width: 1,
               ),
-            ],
-            border: Border.all(
-              color: const Color.fromARGB(255, 114, 178, 230),
-              width: 1,
-            ),
-            borderRadius: BorderRadius.circular(60),
-            color: const Color.fromARGB(255, 255, 255, 255),
-            image: DecorationImage(
-              image: AssetImage(widget.image!),
-              fit: BoxFit.cover,
+              borderRadius: BorderRadius.circular(60),
+              color: const Color.fromARGB(255, 255, 255, 255),
+              image: DecorationImage(
+                image: AssetImage(widget.image!),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),

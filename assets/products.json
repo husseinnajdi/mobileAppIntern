@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "category": "Fruits",
         "title": "Red Apples",
         "image": "assets/images/apples.png",
@@ -10,7 +10,7 @@
         "hasdeal": true
     },
     {
-        "id": 2,
+        "id": 1,
         "category": "Fruits",
         "title": "Bananas",
         "image": "assets/images/bananas.png",
@@ -20,7 +20,7 @@
         "hasdeal": false
     },
     {
-        "id": 3,
+        "id": 2,
         "category": "Fruits",
         "title": "Oranges",
         "image": "assets/images/oranges.png",
@@ -30,7 +30,7 @@
         "hasdeal": true
     },
     {
-        "id": 4,
+        "id": 3,
         "category": "Fruits",
         "title": "Strawberries",
         "image": "assets/images/strawberries.png",
@@ -40,7 +40,7 @@
         "hasdeal": false
     },
     {
-        "id": 5,
+        "id": 4,
         "category": "Vegetables",
         "title": "Tomatoes",
         "image": "assets/images/tomatoes.png",
@@ -50,7 +50,7 @@
         "hasdeal": true
     },
     {
-        "id": 6,
+        "id": 5,
         "category": "Vegetables",
         "title": "Potatoes",
         "image": "assets/images/potatoes.png",
@@ -60,7 +60,7 @@
         "hasdeal": false
     },
     {
-        "id": 7,
+        "id": 6,
         "category": "Vegetables",
         "title": "Onions",
         "image": "assets/images/onions.png",
@@ -70,7 +70,7 @@
         "hasdeal": true
     },
     {
-        "id": 8,
+        "id": 7,
         "category": "Milk & Dairy",
         "title": "Whole Milk",
         "image": "assets/images/milk.png",
@@ -80,7 +80,7 @@
         "hasdeal": true
     },
     {
-        "id": 9,
+        "id": 8,
         "category": "Milk & Dairy",
         "title": "Yogurt",
         "image": "assets/images/yogurt.png",
@@ -90,7 +90,7 @@
         "hasdeal": false
     },
     {
-        "id": 10,
+        "id": 9,
         "category": "Milk & Dairy",
         "title": "Butter",
         "image": "assets/images/butter.png",
@@ -100,7 +100,7 @@
         "hasdeal": true
     },
     {
-        "id": 11,
+        "id": 10,
         "category": "Bakery",
         "title": "White Bread",
         "image": "assets/images/bread.png",
@@ -110,7 +110,7 @@
         "hasdeal": false
     },
     {
-        "id": 12,
+        "id": 11,
         "category": "Bakery",
         "title": "Croissant",
         "image": "assets/images/croissant.png",
@@ -120,7 +120,7 @@
         "hasdeal": true
     },
     {
-        "id": 13,
+        "id": 12,
         "category": "Bakery",
         "title": "Chocolate Cake",
         "image": "assets/images/cake.png",
@@ -130,7 +130,7 @@
         "hasdeal": true
     },
     {
-        "id": 14,
+        "id": 13,
         "category": "Meat",
         "title": "Chicken Breast",
         "image": "assets/images/chicken.png",
@@ -140,7 +140,7 @@
         "hasdeal": true
     },
     {
-        "id": 15,
+        "id": 14,
         "category": "Meat",
         "title": "Beef Steak",
         "image": "assets/images/beef.png",
@@ -150,7 +150,7 @@
         "hasdeal": false
     },
     {
-        "id": 16,
+        "id": 15,
         "category": "Snacks",
         "title": "Potato Chips",
         "image": "assets/images/chips.png",
@@ -160,7 +160,7 @@
         "hasdeal": true
     },
     {
-        "id": 17,
+        "id": 16,
         "category": "Snacks",
         "title": "Chocolate Bar",
         "image": "assets/images/chocolate.png",
@@ -170,7 +170,7 @@
         "hasdeal": false
     },
     {
-        "id": 18,
+        "id": 17,
         "category": "Snacks",
         "title": "Cookies",
         "image": "assets/images/cookies.png",
@@ -180,7 +180,7 @@
         "hasdeal": true
     },
     {
-        "id": 19,
+        "id": 18,
         "category": "Drinks",
         "title": "Orange Juice",
         "image": "assets/images/juice.png",
@@ -190,7 +190,7 @@
         "hasdeal": true
     },
     {
-        "id": 20,
+        "id": 19,
         "category": "Drinks",
         "title": "Mineral Water",
         "image": "assets/images/water.png",

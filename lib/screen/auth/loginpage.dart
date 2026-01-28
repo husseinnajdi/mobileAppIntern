@@ -14,6 +14,7 @@ class _LoginpageState extends State<Loginpage> {
   late TextEditingController _emailController;
   late TextEditingController _passwordController;
   late FocusNode _emailFocusNode;
+  bool obscurepassword = true;
   late FocusNode _passwordFocusNode;
   late final formkey = GlobalKey<FormState>();
 
@@ -26,7 +27,7 @@ class _LoginpageState extends State<Loginpage> {
     _passwordFocusNode = FocusNode();
   }
 
-  void loginfct()async{
+  void loginfct() async {
     String email = _emailController.text.trim();
     String password = _passwordController.text.trim();
 
@@ -34,9 +35,9 @@ class _LoginpageState extends State<Loginpage> {
       await Prefeshelper.login(email, password);
       Navigator.pushReplacementNamed(context, '/Rootpage');
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(e.toString())),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(e.toString())));
     }
   }
 
@@ -45,7 +46,7 @@ class _LoginpageState extends State<Loginpage> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 114, 178, 230),
       body: GestureDetector(
-        onTap: (){
+        onTap: () {
           FocusScope.of(context).unfocus();
         },
         child: Padding(
@@ -69,15 +70,15 @@ class _LoginpageState extends State<Loginpage> {
                               ),
                             ),
                             SizedBox(height: 10),
-                            Text("Welcome Back, You've been missed!"),
+                            Text("Welcome Back!"),
                             SizedBox(height: 20),
                             TextFormField(
                               controller: _emailController,
-            
+
                               focusNode: _emailFocusNode,
                               textInputAction: TextInputAction.next,
                               keyboardType: TextInputType.emailAddress,
-            
+
                               decoration: const InputDecoration(
                                 filled: true,
                                 border: OutlineInputBorder(
@@ -89,7 +90,7 @@ class _LoginpageState extends State<Loginpage> {
                                 hintText: "Email Address",
                                 prefixIcon: Icon(Icons.email_outlined),
                               ),
-            
+
                               onFieldSubmitted: (value) {
                                 FocusScope.of(
                                   context,
@@ -99,12 +100,13 @@ class _LoginpageState extends State<Loginpage> {
                             SizedBox(height: 12),
                             TextFormField(
                               controller: _passwordController,
-            
+
                               focusNode: _passwordFocusNode,
                               textInputAction: TextInputAction.next,
                               keyboardType: TextInputType.visiblePassword,
-            
-                              decoration: const InputDecoration(
+                              obscureText: obscurepassword,
+
+                              decoration:  InputDecoration(
                                 filled: true,
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.all(
@@ -113,16 +115,24 @@ class _LoginpageState extends State<Loginpage> {
                                 ),
                                 fillColor: Colors.white,
                                 hintText: "Password",
-                                prefixIcon: Icon(Icons.remove_red_eye_outlined),
+                                
+                                prefixIcon: IconButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      obscurepassword = !obscurepassword;
+                                    });
+                                  },
+                                  icon: Icon(Icons.remove_red_eye_outlined),
+                                ),
                               ),
                               onFieldSubmitted: (value) {
                                 FocusScope.of(
                                   context,
-                                ).requestFocus(_emailFocusNode);
+                                ).unfocus();
                               },
                             ),
                             SizedBox(height: 20),
-                              ElevatedButton(
+                            ElevatedButton(
                               onPressed: () {
                                 loginfct();
                               },
@@ -148,7 +158,10 @@ class _LoginpageState extends State<Loginpage> {
                                 Text("Dont have an account?"),
                                 TextButton(
                                   onPressed: () {
-                                    Navigator.pushReplacementNamed(context, "/signuppage");
+                                    Navigator.pushReplacementNamed(
+                                      context,
+                                      "/signuppage",
+                                    );
                                   },
                                   child: Text(
                                     "signup",
@@ -188,7 +201,8 @@ class _LoginpageState extends State<Loginpage> {
                                   ),
                                 ),
                               ],
-                            ),SizedBox(height: 12),
+                            ),
+                            SizedBox(height: 12),
                             ElevatedButton.icon(
                               onPressed: () {},
                               label: Text(
@@ -211,7 +225,10 @@ class _LoginpageState extends State<Loginpage> {
                             SizedBox(height: 12),
                             ElevatedButton(
                               onPressed: () {
-                                Navigator.pushReplacementNamed(context, '/Rootpage');
+                                Navigator.pushReplacementNamed(
+                                  context,
+                                  '/Rootpage',
+                                );
                               },
                               style: ElevatedButton.styleFrom(
                                 minimumSize: const Size(double.infinity, 50),

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:mobileappintern/provider/categoriesprovider.dart';
 import 'package:mobileappintern/provider/productprovider.dart';
 import 'package:mobileappintern/provider/swipperprovider.dart';
+import 'package:mobileappintern/screen/item_card.dart';
 import 'package:mobileappintern/screen/splashonboarding/splashscreen.dart';
+import 'package:mobileappintern/screen/view_all.dart';
 import 'package:provider/provider.dart';
 import 'package:mobileappintern/root_screen.dart';
 import 'package:mobileappintern/screen/auth/loginpage.dart';
@@ -49,6 +51,8 @@ class MyApp extends StatelessWidget {
           Loginpage.routeName: (context) => const Loginpage(),
           Signuppage.routeName: (context) => const Signuppage(),
           Splashscreen.routeName: (context) => const Splashscreen(),
+          ItemCard.routeName: (context) => const ItemCard(),
+          ViewAll.routeName: (context) => const ViewAll(),
         },
       ),
     );
